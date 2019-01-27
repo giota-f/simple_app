@@ -32,9 +32,9 @@ In a linux based system(instructions apply to Ubuntu 18.04):
     $curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose  
     $chmod +x /usr/local/bin/docker-compose  
 
-*  Run application:  
-Run: 
-    $cd simple_app/  
+*  Run application:    
+Run:   
+    $cd simple_app/    
     $docker-compose up -d  
 and:   
     $docker ps to verify that the services are running
@@ -44,7 +44,7 @@ Now you can access the restapi service in http://localhost:5000 and MongoDB loca
 
 ## Note
 
-If you want to deploy restapi service only you can do the following
+If you want to deploy restapi service only you can do the following:
 *  setup enviromental variable MONGO_DB=your_mongo(by default localhost:27017)
 *  setup enviromental variable MONGO_USERNAME=your_username(by default admin)
 *  setup enviromental variable MONGO_PASSWORD=your_password(by default admin)
