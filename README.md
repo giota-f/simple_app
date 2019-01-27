@@ -1,5 +1,5 @@
-# Simple flask app
-## Design:
+# Simple flask app for storing and retrieving user information to a local database
+## Design
 
 ### The application consists of two parts:
 
@@ -13,7 +13,7 @@
 /getUser/ip_address/<ip_address>
 
 
-## Installation Instructions:
+## Installation Instructions
 
 In a linux based system(instructions apply to Ubuntu 18.04):  
 *  Login as root:  
@@ -31,16 +31,16 @@ In a linux based system(instructions apply to Ubuntu 18.04):
     $curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose  
     $chmod +x /usr/local/bin/docker-compose  
 
-*  Run application:
+*  Run application:  
 Run:  
-    $docker-compose up -d
+    $docker-compose up -d  
 and:   
     $docker ps to verify that the services are running
 
 Now you can access the restapi service in http://localhost:5000 and MongoDB localhost:27017
 
 
-## !Note!
+## Note
 
 *  If you want to deploy restapi service only you can do the following
 	*  setup enviromental variable MONGO_DB=your_mongo(by default localhost:27017)
