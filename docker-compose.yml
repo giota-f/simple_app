@@ -1,0 +1,23 @@
+version: '2'
+services:
+    myapp:
+        build: .
+        container_name: "restapi"
+        environment:
+          - MONGO_DB=mongodb://mongodb:27017/
+        ports:
+            - 5000:5000
+        depends_on:
+            - mongodb
+    mongodb:
+        image: mongo:latest
+        container_name: "mongodb"
+        environment:
+          - MONGO_DATA_DIR=/data/db
+          - MONGO_INITDB_ROOT_USERNAME=admin
+          - MONGO_INITDB_ROOT_PASSWORD=admin
+          - MONGO_INITDB_DATABASE=admin
+        volumes:
+          - ./data/db:/data/db
+        ports:
+            - 27017:27017
