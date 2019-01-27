@@ -1,4 +1,5 @@
-# Simple flask app for storing and retrieving user information to a local database
+# Simple flask app
+## Storing and retrieving user information from a local database
 ## Design
 
 ### The application consists of two parts:
@@ -32,7 +33,8 @@ In a linux based system(instructions apply to Ubuntu 18.04):
     $chmod +x /usr/local/bin/docker-compose  
 
 *  Run application:  
-Run:  
+Run: 
+    $cd simple_app/  
     $docker-compose up -d  
 and:   
     $docker ps to verify that the services are running
@@ -42,10 +44,10 @@ Now you can access the restapi service in http://localhost:5000 and MongoDB loca
 
 ## Note
 
-*  If you want to deploy restapi service only you can do the following
-	*  setup enviromental variable MONGO_DB=your_mongo(by default localhost:27017)
-        *  setup enviromental variable MONGO_USERNAME=your_username(by default admin)
-        *  setup enviromental variable MONGO_PASSWORD=your_password(by default admin)
-        *  setup enviromental variable FLASK_APP=restapi
-        *  cd app/
-	*  flask run --host=0.0.0.0
+If you want to deploy restapi service only you can do the following
+*  setup enviromental variable MONGO_DB=your_mongo(by default localhost:27017)
+*  setup enviromental variable MONGO_USERNAME=your_username(by default admin)
+*  setup enviromental variable MONGO_PASSWORD=your_password(by default admin)
+*  setup enviromental variable FLASK_APP=restapi
+*  cd simple_app/
+*  flask run --host=0.0.0.0
